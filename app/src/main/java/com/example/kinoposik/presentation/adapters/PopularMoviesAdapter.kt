@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.RequestManager
 import com.example.kinoposik.R
-import com.example.kinoposik.domain.entities.Movie
+import com.example.kinoposik.presentation.models.Movie
 import org.koin.java.KoinJavaComponent.inject
 
 class PopularMoviesAdapter : RecyclerView.Adapter<PopularMoviesAdapter.MovieViewHolder>() {

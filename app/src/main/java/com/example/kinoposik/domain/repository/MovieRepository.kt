@@ -1,8 +1,8 @@
 package com.example.kinoposik.domain.repository
 
 import com.example.kinoposik.common.Constants.API_KEY
-import com.example.kinoposik.data.remote.dto.movie_details.MovieDetails
-import com.example.kinoposik.data.remote.dto.popular_movies.PopularMovies
+import com.example.kinoposik.domain.entities.movie_details.MovieDetails
+import com.example.kinoposik.domain.entities.popular_movies.PopularMovies
 
 interface MovieRepository {
 

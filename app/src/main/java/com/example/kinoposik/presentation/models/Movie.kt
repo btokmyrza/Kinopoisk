@@ -1,4 +1,4 @@
-package com.example.kinoposik.domain.entities
+package com.example.kinoposik.presentation.models
 
 data class Movie(
     val tmdbId: Int,

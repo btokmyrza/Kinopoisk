@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kinoposik.R
-import com.example.kinoposik.presentation.MovieDetailsBottomSheetDialogFragment
+import com.example.kinoposik.presentation.MovieDetailsBottomSheet
 import com.example.kinoposik.presentation.adapters.PopularMoviesAdapter
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         popularMoviesAdapter.setOnMovieClickListener {
-            val movieDetailsBottomSheetDialog = MovieDetailsBottomSheetDialogFragment.newInstance()
+            val movieDetailsBottomSheetDialog = MovieDetailsBottomSheet.newInstance()
             val bundle = Bundle()
             bundle.putInt("Movie", it.tmdbId)
             movieDetailsBottomSheetDialog.arguments = bundle

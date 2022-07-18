@@ -1,4 +1,4 @@
-package com.example.kinoposik.data.remote.dto.movie_details
+package com.example.kinoposik.domain.entities.movie_details
 
 data class MovieGenre(
     val id: Int,

@@ -1,7 +1,7 @@
-package com.example.kinoposik.data.remote.dto.popular_movies
+package com.example.kinoposik.domain.entities.popular_movies
 
-import com.example.kinoposik.common.Constants.POSTER_BASE_URL
-import com.example.kinoposik.domain.entities.Movie
+import com.example.kinoposik.common.Constants.MOVIE_POSTER_BASE_URL
+import com.example.kinoposik.presentation.models.Movie
 import com.google.gson.annotations.SerializedName
 
 data class MovieResult(
@@ -33,6 +33,6 @@ fun MovieResult.toMovie(): Movie {
     return Movie(
         tmdbId = id,
         title = title,
-        imgUrl = POSTER_BASE_URL + posterPath
+        imgUrl = MOVIE_POSTER_BASE_URL + posterPath
     )
 }

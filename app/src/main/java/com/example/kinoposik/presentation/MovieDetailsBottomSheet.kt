@@ -1,7 +1,6 @@
 package com.example.kinoposik.presentation
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,7 +14,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.java.KoinJavaComponent.inject
 
-class MovieDetailsBottomSheetDialogFragment : BottomSheetDialogFragment() {
+class MovieDetailsBottomSheet : BottomSheetDialogFragment() {
 
     private val mainViewModel by viewModel<MainViewModel>()
     private val glide by inject<RequestManager>(RequestManager::class.java)
@@ -30,7 +29,7 @@ class MovieDetailsBottomSheetDialogFragment : BottomSheetDialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(
-            R.layout.fragment_movie_details_bottom_sheet_dialog,
+            R.layout.fragment_movie_details_bottom_sheet,
             container,
             false
         )
@@ -47,7 +46,7 @@ class MovieDetailsBottomSheetDialogFragment : BottomSheetDialogFragment() {
         mainViewModel.loadMovieDetails(movieId)
         mainViewModel.movieDetails.observe(this) { movieDetails ->
             glide
-                .load(Constants.POSTER_BASE_URL + movieDetails.posterPath)
+                .load(Constants.MOVIE_POSTER_BASE_URL + movieDetails.posterPath)
                 .into(ivMoviePoster)
             tvMovieTitle.text = movieDetails.title
             tvMovieDescription.text = movieDetails.overview
@@ -56,6 +55,6 @@ class MovieDetailsBottomSheetDialogFragment : BottomSheetDialogFragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance() = MovieDetailsBottomSheetDialogFragment()
+        fun newInstance() = MovieDetailsBottomSheet()
     }
 }

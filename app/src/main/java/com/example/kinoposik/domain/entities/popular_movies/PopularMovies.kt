@@ -1,4 +1,4 @@
-package com.example.kinoposik.data.remote.dto.popular_movies
+package com.example.kinoposik.domain.entities.popular_movies
 
 data class PopularMovies(
     val page: Int,

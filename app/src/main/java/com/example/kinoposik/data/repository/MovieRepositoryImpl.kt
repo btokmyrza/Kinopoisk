@@ -1,8 +1,8 @@
 package com.example.kinoposik.data.repository
 
 import com.example.kinoposik.data.remote.MovieApi
-import com.example.kinoposik.data.remote.dto.movie_details.MovieDetails
-import com.example.kinoposik.data.remote.dto.popular_movies.PopularMovies
+import com.example.kinoposik.domain.entities.movie_details.MovieDetails
+import com.example.kinoposik.domain.entities.popular_movies.PopularMovies
 import com.example.kinoposik.domain.repository.MovieRepository
 
 class MovieRepositoryImpl(
